@@ -1,14 +1,9 @@
 import React from 'react'
 import TodoCard from './TodoCard'
 
-
-export default function TodoList() {
-
-  let todos = [
-    'go to the gym',
-    'eat more fruits and veg',
-    'pick up the kids'
-  ]
+// todoList receives the todos array as "props" and sort of initializes it with cost {todos} = props
+export default function TodoList(props) {
+  const {todos} = props
 
   return (
     <ul className='main'>
