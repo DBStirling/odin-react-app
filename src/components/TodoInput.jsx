@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 export default function TodoInput(props) {
-    const {handleAddTodos, setTodoValue, todoValue} = props
+    const {handleAddTodos, setTodoValue, todoValue, handleClearTodo} = props
     // Creates todoValue stateful variable and assigns empty string as default value
 
     return (
@@ -15,6 +15,10 @@ export default function TodoInput(props) {
                 handleAddTodos(todoValue)
                 setTodoValue('')
             }}>Add</button>
+
+            <button onClick={()=> {
+                handleClearTodo()
+            }}>Clear</button>
 
         </header>
     )

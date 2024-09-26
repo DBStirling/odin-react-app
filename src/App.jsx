@@ -33,7 +33,12 @@ function App() {
   function handleEditTodo(index) {
     const valueToBeEdited = todos[index]
     setTodoValue(valueToBeEdited)
-    handleDeleteTodo(index);
+    handleDeleteTodo(index)
+  }
+
+  function handleClearTodo() {
+    const clearedTodoList = []
+    setTodos(clearedTodoList)
   }
 
 // since the dependancy array is empty, this useEffect function will run
@@ -54,7 +59,9 @@ function App() {
 
   return ( 
     <>
-      <TodoInput todoValue={todoValue} setTodoValue={setTodoValue} handleAddTodos={handleAddTodos} />
+      <TodoInput handleClearTodo={handleClearTodo} todoValue={todoValue} 
+                setTodoValue={setTodoValue} handleAddTodos={handleAddTodos}/>
+
       <TodoList handleEditTodo={handleEditTodo} handleDeleteTodo={handleDeleteTodo} todos={todos} />    
     </>
   )

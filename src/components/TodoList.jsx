@@ -11,7 +11,6 @@ export default function TodoList(props) {
         return (
           <TodoCard {...props} key={todoIndex} index={todoIndex}>
             <p>{todo}</p>
-
           </TodoCard>
         )
       })}
