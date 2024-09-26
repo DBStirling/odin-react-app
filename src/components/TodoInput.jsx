@@ -1,9 +1,8 @@
 import { useState } from "react"
 
 export default function TodoInput(props) {
-    const {handleAddTodos} = props
+    const {handleAddTodos, setTodoValue, todoValue} = props
     // Creates todoValue stateful variable and assigns empty string as default value
-    const [todoValue, setTodoValue] = useState('')
 
     return (
         <header>
